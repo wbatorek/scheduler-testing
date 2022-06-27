@@ -23,25 +23,7 @@ public class Schedule1 extends AbstractDcomTimer {
 	public boolean isPersistent() {
 		return true;
 	}
-
-//	@Override
-//	public void run() {
-//		System.out.println("| Scheduler 1 running");
-//		
-//	}
-
 	
-//	@Schedule(second = "*/1", minute = "*", hour = "*")
-	public void scheduleTask() {
-		System.out.println("|                                           Scheduler 1 running");
-	}
-
-	@Override
-	public void ejbTimeout(Timer timer) {
-		System.out.println("| Scheduler 1 running");
-		
-	}
-
 	@Override
 	public String getJobName() {
 		return "Run test scheduled job";
@@ -49,14 +31,7 @@ public class Schedule1 extends AbstractDcomTimer {
 
 	@Override
 	public void run(Timer timer) throws Exception {
-		// TODO Auto-generated method stub
-		
+		System.out.println("| Scheduler 1 running");
 	}
 
-
-//	@Override
-//	public void runScheduler() {
-//		System.out.println("|                                           Scheduler 1 running");
-//		
-//	}
 }
