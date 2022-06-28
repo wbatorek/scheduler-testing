@@ -13,8 +13,8 @@ import javax.inject.Inject;
 
 public abstract class AbstractDcomTimer implements TimedObject {
 
-//	@Inject
-//	private DcomJobManagerBean dcomJobManagerBean;
+	@Inject
+	private DcomJobManagerBean dcomJobManagerBean;
 
 	@Resource
 	private TimerService timerService;
@@ -151,7 +151,7 @@ public abstract class AbstractDcomTimer implements TimedObject {
 		
 		try {
 			run(timer);
-//			dcomJobManagerBean.updateLastExecuted(getTimerName(), Calendar.getInstance(),Calendar.getInstance(), "TEST");
+			dcomJobManagerBean.updateLastExecuted(getTimerName(), Calendar.getInstance(),Calendar.getInstance(), "TEST");
 
 		} catch (Exception e) {
 			System.out.println("Exception during " + e.getMessage());

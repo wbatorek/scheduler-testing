@@ -22,11 +22,14 @@ public class DcomTimerEntity {
 //	private String jobDescription;
 
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="LAST_EXECUTED")
 	private Calendar lastExecuted;
 	
 	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name="NEXT_EXECUTION")
 	private Calendar nextExecution;
 
+	@Column(name="LAST_RESULT")
 	private String lastResult;
 
 	public String getJobName() {
