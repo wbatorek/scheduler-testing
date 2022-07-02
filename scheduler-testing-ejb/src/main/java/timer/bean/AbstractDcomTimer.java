@@ -151,7 +151,7 @@ public abstract class AbstractDcomTimer implements TimedObject {
 		
 		try {
 			run(timer);
-			dcomJobManagerBean.updateLastExecuted(getTimerName(), Calendar.getInstance(),Calendar.getInstance(), "TEST");
+			dcomJobManagerBean.updateLastExecuted(getJobName(), Calendar.getInstance(), Calendar.getInstance(), "no new messeges");
 
 		} catch (Exception e) {
 			System.out.println("Exception during " + e.getMessage());
